@@ -9,7 +9,7 @@ data class Wish(
 ) : Parcelable {
     constructor(source: Parcel) : this(
         source.readParcelable<User>(User::class.java.classLoader),
-        source.readString()
+        source.readString() ?: ""
     )
 
     override fun describeContents() = 0

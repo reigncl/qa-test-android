@@ -14,7 +14,7 @@ abstract class ApplicationModule {
         @Provides
         @JvmStatic
         fun provideId(context: Context): String {
-            return PreferenceManager.getDefaultSharedPreferences(context).getString("id", "")
+            return PreferenceManager.getDefaultSharedPreferences(context).getString("id", "") ?: ""
         }
     }
 

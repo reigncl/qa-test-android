@@ -18,17 +18,17 @@ data class Site(
     var picture: String = ""
 ) : Parcelable {
     constructor(source: Parcel) : this(
-        source.readString(),
-        source.readString(),
-        source.readString(),
-        source.readString(),
+        source.readString() ?: "",
+        source.readString() ?: "",
+        source.readString() ?: "",
+        source.readString() ?: "",
         source.readDouble(),
         source.readDouble(),
-        source.readString(),
-        source.readString(),
-        source.readString(),
-        source.readString(),
-        source.readString()
+        source.readString() ?: "",
+        source.readString() ?: "",
+        source.readString() ?: "",
+        source.readString() ?: "",
+        source.readString() ?: ""
     )
 
     override fun describeContents() = 0
